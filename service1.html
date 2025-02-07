@@ -673,3 +673,95 @@
 
 <!-- Mirrored from themewar.com/html/bepro/service1.html by HTTrack Website Copier/3.x [XR&CO'2014], Thu, 17 Oct 2024 13:04:45 GMT -->
 </html>
+
+
+
+<!-- 
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Loan Calculator</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            background-color: #f4f4f4;
+        }
+        .calculator {
+            background: white;
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            width: 300px;
+            text-align: center;
+        }
+        input {
+            width: 100%;
+            padding: 8px;
+            margin: 10px 0;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+        }
+        button {
+            background-color: #28a745;
+            color: white;
+            padding: 10px;
+            border: none;
+            width: 100%;
+            cursor: pointer;
+            border-radius: 4px;
+        }
+        button:hover {
+            background-color: #218838;
+        }
+        .result {
+            margin-top: 15px;
+            font-size: 18px;
+        }
+    </style>
+</head>
+<body>
+    <div class="calculator">
+        <h2>Loan Calculator</h2>
+        <input type="number" id="loanAmount" placeholder="Loan Amount" required>
+        <input type="number" id="loanTerm" placeholder="Loan Term (months)" required>
+        <button onclick="calculateLoan()">Calculate</button>
+        <div class="result" id="monthlyPayment"></div>
+        <div class="result" id="totalRepayment"></div>
+    </div>
+
+    <script>
+        function calculateLoan() {
+            let amount = parseFloat(document.getElementById('loanAmount').value);
+            let months = parseInt(document.getElementById('loanTerm').value);
+            
+            if (isNaN(amount) || isNaN(months) || months <= 0) {
+                document.getElementById('monthlyPayment').innerText = "Please enter valid values.";
+                document.getElementById('totalRepayment').innerText = "";
+                return;
+            }
+            
+            let baseRate = 0.20; // 20% per month
+            let rate = baseRate / Math.sqrt(months); // Decreasing rate for longer terms
+            let monthlyPayment = (amount * rate) / (1 - Math.pow(1 + rate, -months));
+            let totalRepayment = monthlyPayment * months;
+            
+            document.getElementById('monthlyPayment').innerText = `Monthly Payment: $${monthlyPayment.toFixed(2)}`;
+            document.getElementById('totalRepayment').innerText = `Total Repayment: $${totalRepayment.toFixed(2)}`;
+        }
+    </script>
+</body>
+</html>
+
+
+
+
+
+
+-->
