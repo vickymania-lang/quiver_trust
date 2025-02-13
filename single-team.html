@@ -1,9 +1,9 @@
 <!DOCTYPE html>
 <html lang="en">
 
-<!-- Mirrored from themewar.com/html/bepro/single-team.html by HTTrack Website Copier/3.x [XR&CO'2014], Thu, 17 Oct 2024 13:06:35 GMT -->
+<!-- Mirrored from themewar.com/html/bepro/index.html by HTTrack Website Copier/3.x [XR&CO'2014], Thu, 17 Oct 2024 13:01:32 GMT -->
 <head>
-<title>Bepro - Multi-Purpose Business & Consulting Responsive HTML5 Template</title>
+<title>Quiver Trust Limited -  Microfinance Solutions</title>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width">
 
@@ -26,19 +26,87 @@
 <link rel="stylesheet" href="assets/css/responsive.css" />
 
 
-<link rel="icon" type="image/png" href="assets/images/favicon.png">
+<link rel="icon" type="image/png" href="assets/images/favicon.ico">
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
 
+<style>
+  
+    .loan-container {
+        max-width: 500px;
+        margin: auto;
+    }
+    .card {
+        border-radius: 15px;
+    }
+
+  .interactive-card {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background: #f8f9fa;
+    padding: 20px;
+    border-radius: 10px;
+    transition: background 0.3s, transform 0.3s;
+    cursor: pointer;
+}
+
+.interactive-card:hover {
+    background: #ADD8E6;
+    color: white;
+    transform: translateY(-5px);
+}
+
+.interactive-card:hover .title,
+.interactive-card:hover .sub-title,
+.interactive-card:hover .svg-path {
+    color: white;
+    stroke: white;
+}
+
+.title {
+    color: #ADD8E6;
+    font-weight: bold;
+}
+
+.sub-title {
+    color: #ADD8E6;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    font-weight: bold;
+}
+
+.svg-path {
+    stroke: #ADD8E6;
+}
+
+.img-card img {
+    width: 80px;
+    height: auto;
+}
+</style>
+<script>
+    function calculateLoan() {
+        let amount = parseFloat(document.getElementById("borrowAmount").value) || 0;
+        let duration = parseInt(document.getElementById("borrowDuration").value) || 1;
+        let interestRate = 0.03; // 3% monthly interest
+        let monthlyPayment = (amount * interestRate) / (1 - Math.pow(1 + interestRate, -duration));
+        
+        document.getElementById("monthlyRepayment").innerText = `₦${monthlyPayment.toFixed(2)}`;
+    }
+</script>
 </head>
 <body>
 
 <div class="preloader clock text-center">
 <div class="queraLoader">
 <div class="loaderO">
-<span>B</span>
-<span>E</span>
-<span>P</span>
-<span>R</span>
-<span>O</span>
+<span style="font-family:'Courier New', Courier, monospace">Q</span>
+<span style="font-family:'Courier New', Courier, monospace">U</span>
+<span style="font-family:'Courier New', Courier, monospace">I</span>
+<span style="font-family:'Courier New', Courier, monospace">V</span>
+<span style="font-family:'Courier New', Courier, monospace">E</span>
+<span style="font-family:'Courier New', Courier, monospace">R</span>
 </div>
 </div>
 </div>
@@ -48,15 +116,10 @@
 <div class="container largeContainer">
 <div class="row">
 <div class="col-md-9">
-<p><i class="bpro-mail-2"></i><a href="https://themewar.com/cdn-cgi/l/email-protection#5e2d2b2e2e312c2a1e3b333f3732703d3133">Mail: <span class="__cf_email__" data-cfemail="a3d0d6d3d3ccd1d7e3c6cec2cacf8dc0ccce">[email&#160;protected]</span></a></p>
-<p><i class="bpro-phone-ringing"></i><a href="tel:+1245698909">Phone: + 124 569 89 09</a></p>
+<p><i class="bpro-mail-2"></i><a href="https://themewar.com/cdn-cgi/l/email-protection#73000603031c010733161e121a1f5d101c1e">Mail: <span class="__cf_email__" data-cfemail="e99a9c9999869b9da98c84888085c78a8684">info@quivertrustltd.com.ng</span></a></p>
+<p><i class="bpro-phone-ringing"></i><a href="tel:+1245698909">Phone: +2348060875751</a></p>
 </div>
-<div class="col-md-3">
-<div class="topsocial">
-<a href="javascript:void(0);"><i class="twi-facebook-square"></i></a>
-<a href="javascript:void(0);"><i class="twi-pinterest"></i></a>
-<a href="javascript:void(0);"><i class="twi-twitter-square"></i></a>
-</div>
+
 </div>
 </div>
 </div>
@@ -69,218 +132,29 @@
 <div class="col-lg-12">
 <div class="navbar01">
 <div class="logo">
-<a href="index.html"><img src="assets/images/logo.png" alt="berpo"></a>
+<a href="index.html"><img src="assets/images/me/QTLOGO.png" height="800" width="800" alt="berpo"></a>
 </div>
 <a href="javascript:void(0)" class="menu_btn"><i class="twi-bars2"></i></a>
 <nav class="mainMenu">
 <ul>
-<li class="menu-item-has-children">
-<a href="javascript:void(0);">Home</a>
-<div class="sub-menu mega_menu">
-<div class="row">
-<div class="col-lg-3 col-md-4">
-<div class="showcase">
-<div class="showcaseThumb">
-<a target="_blank" href="index.html">
-<img src="assets/images/h1.png" alt="home">
-</a>
-</div>
-<h5>Home <span>Consulting</span></h5>
-</div>
-</div>
-<div class="col-lg-3 col-md-4">
-<div class="showcase">
-<div class="showcaseThumb">
-<a target="_blank" href="index2.html">
-<img src="assets/images/h2.png" alt="home">
-</a>
-</div>
-<h5>Home <span>Corporate</span></h5>
-</div>
-</div>
-<div class="col-lg-3 col-md-4">
-<div class="showcase">
-<div class="showcaseThumb">
-<a target="_blank" href="index3.html">
-<img src="assets/images/h3.png" alt="home">
-</a>
-</div>
-<h5>Home <span>Agency</span></h5>
-</div>
-</div>
-<div class="col-lg-3 col-md-4">
-<div class="showcase">
-<div class="showcaseThumb">
-<a target="_blank" href="index4.html">
-<img src="assets/images/h4.png" alt="home">
-</a>
-</div>
-<h5>Home <span>IT Solutions</span></h5>
-</div>
-</div>
-<div class="col-lg-3 col-md-4">
-<div class="showcase">
-<div class="showcaseThumb">
-<a target="_blank" href="index5.html">
-<img src="assets/images/h5.png" alt="home">
-</a>
-</div>
-<h5>Home <span>Achitecture</span></h5>
-</div>
-</div>
-<div class="col-lg-3 col-md-4">
-<div class="showcase">
-<div class="showcaseThumb">
-<a target="_blank" href="index6.html">
-<img src="assets/images/h6.png" alt="home">
-</a>
-</div>
-<h5>Home <span>Marketing</span></h5>
-</div>
-</div>
-<div class="col-lg-3 col-md-4">
-<div class="showcase">
-<div class="showcaseThumb">
-<a target="_blank" href="index7.html">
-<img src="assets/images/h7.png" alt="home">
-</a>
-</div>
-<h5>Home <span>Insurance</span></h5>
-</div>
-</div>
-<div class="col-lg-3 col-md-4">
-<div class="showcase">
-<div class="showcaseThumb">
-<a target="_blank" href="javascript:void(0);">
-<img src="assets/images/h8.png" alt="home">
-</a>
-</div>
-<h5>Coming <span>Soon</span></h5>
-</div>
-</div>
-</div>
-</div>
+<li class="">
+<a href="index.html">HOME</a>
+
 </li>
-<li class="menu-item-has-children">
-<a href="javascript:void(0);">Services</a>
-<ul class="sub-menu">
-<li class="menu-item-has-children">
-<a href="javascript:void(0);">Services Page</a>
-<ul class="sub-menu">
-<li><a href="service1.html">Service 01</a></li>
-<li><a href="service2.html">Service 02</a></li>
-<li><a href="service3.html">Service 03</a></li>
-<li><a href="service4.html">Service 04</a></li>
-<li><a href="service5.html">Service 05</a></li>
-<li><a href="service6.html">Service 06</a></li>
-<li><a href="service7.html">Service 07</a></li>
-</ul>
+<li class="">
+<a href="about1.html">ABOUT</a>
+
 </li>
-<li class="menu-item-has-children">
-<a href="javascript:void(0);">Services Details</a>
-<ul class="sub-menu">
-<li><a href="single-service.html">Service Details 01</a></li>
-<li><a href="single-service2.html">Service Details 02</a></li>
-<li><a href="single-service3.html">Service Details 03</a></li>
-</ul>
+<li class="">
+<a href="service1.html">SERVICE</a>
+
 </li>
-</ul>
-</li>
-<li class="menu-item-has-children">
-<a href="javascript:void(0);">Portfolio</a>
-<ul class="sub-menu">
-<li class="menu-item-has-children">
-<a href="javascript:void(0);">Portfolio Page</a>
-<ul class="sub-menu">
-<li><a href="folio1.html">Portfolio 01</a></li>
-<li><a href="folio2.html">Portfolio 02</a></li>
-<li><a href="folio3.html">Portfolio 03</a></li>
-<li><a href="folio4.html">Portfolio 04</a></li>
-<li><a href="folio5.html">Portfolio 05</a></li>
-<li><a href="folio6.html">Portfolio 06</a></li>
-</ul>
-</li>
-<li class="menu-item-has-children">
-<a href="javascript:void(0);">Portfolio Details</a>
-<ul class="sub-menu">
-<li><a href="single-folio.html">Portfolio Details 01</a></li>
-<li><a href="single-folio2.html">Portfolio Details 02</a></li>
-<li><a href="single-folio3.html">Portfolio Details 03</a></li>
-</ul>
-</li>
-</ul>
-</li>
-<li class="menu-item-has-children">
-<a href="javascript:void(0);">blogs</a>
-<ul class="sub-menu">
-<li class="menu-item-has-children">
-<a href="javascript:void(0);">Left Sidebar View</a>
-<ul class="sub-menu">
-<li><a href="blog1.html">View Style 01</a></li>
-<li><a href="blog2.html">View Style 02</a></li>
-<li><a href="blog3.html">View Style 03</a></li>
-<li><a href="blog4.html">View Style 04</a></li>
-<li><a href="blog5.html">View Style 05</a></li>
-</ul>
-</li>
-<li class="menu-item-has-children">
-<a href="javascript:void(0);">Right Sidebar View</a>
-<ul class="sub-menu">
-<li><a href="blog6.html">View Style 01</a></li>
-<li><a href="blog7.html">View Style 02</a></li>
-<li><a href="blog8.html">View Style 03</a></li>
-<li><a href="blog9.html">View Style 04</a></li>
-<li><a href="blog10.html">View Style 05</a></li>
-</ul>
-</li>
-<li class="menu-item-has-children">
-<a href="javascript:void(0);">Fullwidth View</a>
-<ul class="sub-menu">
-<li><a href="blog11.html">View Style 01</a></li>
-<li><a href="blog12.html">View Style 02</a></li>
-<li><a href="blog13.html">View Style 03</a></li>
-<li><a href="blog14.html">View Style 04</a></li>
-<li><a href="blog15.html">View Style 05</a></li>
-<li><a href="blog16.html">View Style 06</a></li>
-</ul>
-</li>
-<li><a href="single-blog.html">Blog Details</a></li>
-</ul>
-</li>
-<li class="menu-item-has-children">
-<a href="javascript:void(0);">pages</a>
-<ul class="sub-menu">
-<li class="menu-item-has-children">
-<a href="javascript:void(0);">Shop Page</a>
-<ul class="sub-menu">
-<li><a href="shop.html">Product Page</a></li>
-<li><a href="single-product.html">Product Details</a></li>
-</ul>
-</li>
-<li class="menu-item-has-children">
-<a href="javascript:void(0);">Team View Style</a>
-<ul class="sub-menu">
-<li><a href="team1.html">Team 01</a></li>
-<li><a href="team2.html">Team 02</a></li>
-<li><a href="team3.html">Team 03</a></li>
-<li><a href="team4.html">Team 04</a></li>
-<li><a href="team5.html">Team 05</a></li>
-<li><a href="team6.html">Team 06</a></li>
-<li><a href="single-team.html">Team Details</a></li>
-</ul>
-</li>
-<li class="menu-item-has-children">
-<a href="javascript:void(0);">About Page</a>
-<ul class="sub-menu">
-<li><a href="about1.html">About 01</a></li>
-<li><a href="about2.html">About 02</a></li>
-</ul>
-</li>
-<li class="menu-item-has-children">
-<a href="javascript:void(0);">Contact Page</a>
-<ul class="sub-menu">
-<li><a href="contact.html">Contact 01</a></li>
-<li><a href="contact2.html">Contact 02</a></li>
+  <li class="sub-menu">
+<a href="FAQs.html">FAQs</a>
+
+</li> 
+
+
 </ul>
 </li>
 </ul>
@@ -289,15 +163,12 @@
 </nav>
 <div class="accessNav">
 <a class="search_btn" href="javascript:void(0);"><i class="twi-search1"></i></a>
-<div class="shoping_cart">
-<a class="cartBtn" href="javascript:void(0);"><i class="twi-shopping-bag1"></i><span>4</span></a>
-</div>
 <a class="berpo_btn" href="contact.html">
 <span class="bp-shape"></span>
 <span class="bp-shape"></span>
 <span class="bp-shape"></span>
 <span class="bp-shape"></span>
-<span class="bp-text">Get A Quote</span>
+<span class="bp-text">Contact Us</span>
 </a>
 </div>
 </div>
@@ -328,185 +199,71 @@
 </section>
 
 
-<section class="page_banner" style="background-image: url(assets/images/bg/banner.jpg);">
-<div class="overlay"></div>
-<div class="container largeContainer">
-<div class="row">
-<div class="col-md-12 text-center">
-<h2 class="banner-title">Member Details</h2>
-<p class="breadcrumbs"><a href="index.html">Home</a><span>-</span>Pages<span>-</span>Mark Smith</p>
+<section class="slider_01">
+<div class="rev_slider_wrapper">
+<div id="rev_slider_1" class="rev_slider fullwidthabanner" style="display:none;" data-version="5.4.1">
+<ul>
+<li data-index="rs-3049" data-transition="random-premium" data-slotamount="default" data-hideafterloop="0" data-hideslideonmobile="off" data-easein="Power3.easeInOut" data-easeout="Power3.easeInOut" data-masterspeed="1000" data-thumb data-rotate="0" data-saveperformance="off" data-title data-param1 data-param2 data-param3 data-param4 data-param5 data-param6 data-param7 data-param8 data-param9 data-param10 data-description>
+<img src="assets/images/me/freeblack.jpg" alt="berpo" data-bgposition="center center" data-bgfit="cover" data-bgrepeat="no-repeat" data-bgparallax="0" class="rev-slidebg" data-no-retina>
+<div class="tp-caption ws_nowrap text-uppercase" data-x="['right', 'right', 'center', 'center']" data-hoffset="['0']" data-y="['middle']" data-voffset="['-70','-70','-70','-100']" data-fontsize="['14','14','14','14']" data-fontweight="700" data-lineheight="['28']" data-letterspacing="2.8" data-width="['670','100%','100%','100%']" data-height="['auto']" data-whitesapce="['normal']" data-color="['#bb0b0b']" data-type="text" data-responsive_offset="on" data-frames="[{&quot;delay&quot;:1500,&quot;speed&quot;:400,&quot;frame&quot;:&quot;0&quot;,&quot;from&quot;:&quot;x:50px;opacity:0;&quot;,&quot;to&quot;:&quot;o:1;&quot;,&quot;ease&quot;:&quot;power3.inOut&quot;},{&quot;delay&quot;:&quot;wait&quot;,&quot;speed&quot;:300,&quot;frame&quot;:&quot;999&quot;,&quot;to&quot;:&quot;x:50px;opacity:0;&quot;,&quot;ease&quot;:&quot;power3.inOut&quot;}]" data-textAlign="['left', 'left', 'center', 'center']" data-paddingtop="[0,0,0,0]" data-paddingright="[0,0,50,20]" data-paddingbottom="[0,0,0,0]" data-paddingleft="[0,300,50,20]"><span class="bg">Microfinance Solution</span>
 </div>
+<div class="tp-caption headFont ws_nowrap" data-x="['right', 'right', 'center', 'center']" data-hoffset="['0', '0', '0', '0']" data-y="['middle']" data-voffset="['34','44','40','10']" data-fontsize="['70','60','55','40']" data-fontweight="700" data-lineheight="['80','70','65','50']" data-width="['670','100%','100%','100%']" data-height="['auto']" data-whitesapce="['normal']" data-color="['#ffffff']" data-type="text" data-responsive_offset="off" data-frames="[{&quot;delay&quot;:2000,&quot;speed&quot;:500,&quot;frame&quot;:&quot;0&quot;,&quot;from&quot;:&quot;x:50px;opacity:0;&quot;,&quot;to&quot;:&quot;o:1;&quot;,&quot;ease&quot;:&quot;power3.inOut&quot;},{&quot;delay&quot;:&quot;wait&quot;,&quot;speed&quot;:300,&quot;frame&quot;:&quot;999&quot;,&quot;to&quot;:&quot;x:50px;opacity:0;&quot;,&quot;ease&quot;:&quot;power3.inOut&quot;}]" data-textAlign="['left', 'left', 'center', 'center']" data-paddingtop="[0,0,0,0]" data-paddingright="[0,0,50,20]" data-paddingbottom="[0,0,0,0]" data-paddingleft="[0,300,50,20]">Welcome to<span class="prcolor"> Quiver Trust Limited </span>
+</div>
+<!-- <div class="tp-caption ws_nowrap" data-x="['right', 'right', 'center', 'center']" data-hoffset="['0', '0', '0', '0']" data-y="['middle']" data-voffset="['160','160','145','145']" data-fontsize="['18','18','18','18']" data-fontweight="400" data-lineheight="['28']" data-width="['670','100%','100%','100%']" data-height="['auto']" data-whitesapce="['normal']" data-color="['#d9d9d9']" data-type="text" data-responsive_offset="off" data-frames="[{&quot;delay&quot;:2400,&quot;speed&quot;:600,&quot;frame&quot;:&quot;0&quot;,&quot;from&quot;:&quot;x:50px;opacity:0;&quot;,&quot;to&quot;:&quot;o:1;&quot;,&quot;ease&quot;:&quot;power3.inOut&quot;},{&quot;delay&quot;:&quot;wait&quot;,&quot;speed&quot;:300,&quot;frame&quot;:&quot;999&quot;,&quot;to&quot;:&quot;x:50px;opacity:0;&quot;,&quot;ease&quot;:&quot;power3.inOut&quot;}]" data-textAlign="['left', 'left', 'center', 'center']" data-paddingtop="[0,0,0,0]" data-paddingright="[0,0,50,20]" data-paddingbottom="[0,0,0,0]" data-paddingleft="[0,300,50,20]" ><p style="color: #0258b6">Our commitment to excellence, integrity, responsibility, accountability, and customer-focused service aligns with our vision of being a trusted partner, delivering exceptional financial solutions.</p> -->
+
+<!-- </div> -->
+<div class="tp-caption ws_nowrap" data-x="['right', 'right', 'center', 'center']" data-hoffset="['0', '0', '0', '0']" data-y="['middle']" data-voffset="['255','245','240','250']" data-fontsize="['15']" data-fontweight="600" data-lineheight="['55']" data-width="['670','100%','100%','100%']" data-height="['auto']" data-whitesapce="['normal']" data-color="['#f0f0f0']" data-type="text" data-responsive_offset="off" data-frames="[{&quot;delay&quot;:2800,&quot;speed&quot;:700,&quot;frame&quot;:&quot;0&quot;,&quot;from&quot;:&quot;x:50px;opacity:0;&quot;,&quot;to&quot;:&quot;o:1;&quot;,&quot;ease&quot;:&quot;power3.inOut&quot;},{&quot;delay&quot;:&quot;wait&quot;,&quot;speed&quot;:300,&quot;frame&quot;:&quot;999&quot;,&quot;to&quot;:&quot;x:50px;opacity:0;&quot;,&quot;ease&quot;:&quot;power3.inOut&quot;}]" data-textAlign="['left', 'left', 'center', 'center']" data-paddingtop="[0,0,0,0]" data-paddingright="[0,0,50,20]" data-paddingbottom="[0,0,0,0]" data-paddingleft="[0,300,50,20]"><a class="berpo_btn" href="service1.html"><span class="bp-shape"></span><span class="bp-shape"></span><span class="bp-shape"></span>
+<span class="bp-shape"></span><span class="bp-text">OUR SERVICES</span></a>
+</div>
+</li>
+<li data-index="rs-3050" data-transition="random-premium" data-slotamount="default" data-hideafterloop="0" data-hideslideonmobile="off" data-easein="Power3.easeInOut" data-easeout="Power3.easeInOut" data-masterspeed="1000" data-thumb data-rotate="0" data-saveperformance="off" data-title data-param1 data-param2 data-param3 data-param4 data-param5 data-param6 data-param7 data-param8 data-param9 data-param10 data-description>
+<img src="assets/images/me/unlockman9.webp" alt="berpo" data-bgposition="center center" data-bgfit="cover" data-bgrepeat="no-repeat" data-bgparallax="0" class="rev-slidebg" data-no-retina>
+<div class="tp-caption ws_nowrap text-uppercase" data-x="['right', 'right', 'center', 'center']" data-hoffset="['0']" data-y="['middle']" data-voffset="['-70','-70','-70','-100']" data-fontsize="['14','14','14','14']" data-fontweight="700" data-lineheight="['28']" data-letterspacing="2.8" data-width="['670','100%','100%','100%']" data-height="['auto']" data-whitesapce="['normal']" data-color="['#bb0b0b']" data-type="text" data-responsive_offset="on" data-frames="[{&quot;delay&quot;:1500,&quot;speed&quot;:400,&quot;frame&quot;:&quot;0&quot;,&quot;from&quot;:&quot;y:50px;opacity:0;&quot;,&quot;to&quot;:&quot;o:1;&quot;,&quot;ease&quot;:&quot;power3.inOut&quot;},{&quot;delay&quot;:&quot;wait&quot;,&quot;speed&quot;:300,&quot;frame&quot;:&quot;999&quot;,&quot;to&quot;:&quot;opacity:0;&quot;,&quot;ease&quot;:&quot;power3.inOut&quot;}]" data-textAlign="['left', 'left', 'center', 'center']" data-paddingtop="[0,0,0,0]" data-paddingright="[0,0,50,20]" data-paddingbottom="[0,0,0,0]" data-paddingleft="[0,300,50,20]"><span class="bg">Microfinance Solution</span>
+</div>
+<div class="tp-caption headFont ws_nowrap" data-x="['right', 'right', 'center', 'center']" data-hoffset="['0', '0', '0', '0']" data-y="['middle']" data-voffset="['34','44','40','10']" data-fontsize="['70','60','55','40']" data-fontweight="700" data-lineheight="['80','70','65','50']" data-width="['670','100%','100%','100%']" data-height="['auto']" data-whitesapce="['normal']" data-color="['#ffffff']" data-type="text" data-responsive_offset="off" data-frames="[{&quot;delay&quot;:1800,&quot;speed&quot;:500,&quot;frame&quot;:&quot;0&quot;,&quot;from&quot;:&quot;y:50px;opacity:0;&quot;,&quot;to&quot;:&quot;o:1;&quot;,&quot;ease&quot;:&quot;power3.inOut&quot;},{&quot;delay&quot;:&quot;wait&quot;,&quot;speed&quot;:300,&quot;frame&quot;:&quot;999&quot;,&quot;to&quot;:&quot;opacity:0;&quot;,&quot;ease&quot;:&quot;power3.inOut&quot;}]" data-textAlign="['left', 'left', 'center', 'center']" data-paddingtop="[0,0,0,0]" data-paddingright="[0,0,50,20]" data-paddingbottom="[0,0,0,0]" data-paddingleft="[0,300,50,20]">Empower Your Dreams <span class="prcolor">  with Easy Financing</span>
+</div>
+<div class="tp-caption ws_nowrap" data-x="['right', 'right', 'center', 'center']" data-hoffset="['0', '0', '0', '0']" data-y="['middle']" data-voffset="['160','160','145','145']" data-fontsize="['18','18','18','18']" data-fontweight="400" data-lineheight="['28']" data-width="['670','100%','100%','100%']" data-height="['auto']" data-whitesapce="['normal']" data-color="['#d9d9d9']" data-type="text" data-responsive_offset="off" data-frames="[{&quot;delay&quot;:2100,&quot;speed&quot;:600,&quot;frame&quot;:&quot;0&quot;,&quot;from&quot;:&quot;y:50px;opacity:0;&quot;,&quot;to&quot;:&quot;o:1;&quot;,&quot;ease&quot;:&quot;power3.inOut&quot;},{&quot;delay&quot;:&quot;wait&quot;,&quot;speed&quot;:300,&quot;frame&quot;:&quot;999&quot;,&quot;to&quot;:&quot;opacity:0;&quot;,&quot;ease&quot;:&quot;power3.inOut&quot;}]" data-textAlign="['left', 'left', 'center', 'center']" data-paddingtop="[0,0,0,0]" data-paddingright="[0,0,50,20]" data-paddingbottom="[0,0,0,0]" data-paddingleft="[0,300,50,20]" style="color: #ADD8E6;>Affordable loans, personalized solutions, and reliable support for your financial growth.
+
+    [Start Your Journey Today]
+
+</div>
+<div class="tp-caption ws_nowrap" data-x="['right', 'right', 'center', 'center']" data-hoffset="['0', '0', '0', '0']" data-y="['middle']" data-voffset="['255','245','240','250']" data-fontsize="['15']" data-fontweight="600" data-lineheight="['55']" data-width="['670','100%','100%','100%']" data-height="['auto']" data-whitesapce="['normal']" data-color="['#f0f0f0']" data-type="text" data-responsive_offset="off" data-frames="[{&quot;delay&quot;:2400,&quot;speed&quot;:700,&quot;frame&quot;:&quot;0&quot;,&quot;from&quot;:&quot;y:50px;opacity:0;&quot;,&quot;to&quot;:&quot;o:1;&quot;,&quot;ease&quot;:&quot;power3.inOut&quot;},{&quot;delay&quot;:&quot;wait&quot;,&quot;speed&quot;:300,&quot;frame&quot;:&quot;999&quot;,&quot;to&quot;:&quot;opacity:0;&quot;,&quot;ease&quot;:&quot;power3.inOut&quot;}]" data-textAlign="['left', 'left', 'center', 'center']" data-paddingtop="[0,0,0,0]" data-paddingright="[0,0,50,20]" data-paddingbottom="[0,0,0,0]" data-paddingleft="[0,300,50,20]"><a class="berpo_btn" href="service1.html"><span class="bp-shape"></span><span class="bp-shape"></span><span class="bp-shape"></span>
+<span class="bp-shape"></span><span class="bp-text">OUR SERVICES</span></a>
+</div>
+</li>
+</ul>
 </div>
 </div>
 </section>
 
 
-<section class="teamDetailsSection">
-<div class="container largeContainer">
-<div class="row">
-<div class="col-lg-6">
-<div class="tmImg">
-<img src="assets/images/team/single-team.jpg" alt>
-<div class="single_skill" data-parcent="88">
-<h5>Marketing Online</h5>
-<div class="ss_parent"><div class="ss_child"></div><span class="runing">88%</span></div>
-</div>
-<div class="single_skill" data-parcent="78">
-<h5>Design Consultant</h5>
-<div class="ss_parent"><div class="ss_child"></div><span class="runing">78%</span></div>
-</div>
-<div class="single_skill" data-parcent="75">
-<h5>Deliver Business</h5>
-<div class="ss_parent"><div class="ss_child"></div><span class="runing">75%</span></div>
-</div>
-</div>
-</div>
-<div class="col-lg-6">
-<div class="tmdCon">
-<div class="tmt_meta">
-<span class="tm_designation">UI/UX Designer</span>
-<h4>Mark Smith</h4>
-<div class="stm_social">
-<a href="https://www.facebook.com/"><i class="twi-facebook-f"></i></a><a href="https://twitter.com/"><i class="twi-twitter"></i></a><a href="https://www.youtube.com/"><i class="twi-youtube"></i></a>
-</div>
-</div>
-<p>
-Cras quis nunc magna. Etiam sed felis eu lorem scelerisque sagittis. Praesent sed arcu quis felis tempus egestas. Proin nec orci eget mi aliquam congue. Nunc mauris sem, imperdiet vel nunc a, bibendum efficitur nunc.
-</p>
-<ul class="listItem tm_meta">
-<li><i class="twi-calendar-alt2"></i><span>Experience: </span> 2 +Years</li>
-<li><i class="twi-headset2"></i><span>Phone: </span> +123 45678 9100</li>
-<li><i class="twi-at1"></i><span>Email: </span> <a href="https://themewar.com/cdn-cgi/l/email-protection" class="__cf_email__" data-cfemail="442d2a222b043d2b313629252d286a272b29">[email&#160;protected]</a></li>
-</ul>
-<p>
-Cras quis nunc magna. Etiam sed felis eu lorem scelerisque sagittis. Praesent sed arcu quis felis tempus egestas. Proin nec orci eget mi aliquam congue. Nunc mauris sem, imperdiet vel nunc a, bibendum efficitur nunc.
-</p>
-<p>
-Vivamus nec ligula et leo sodales pellentesque id sed lectus. Aliquam viverra velit sagittis pharetra venenatis. Etiam ut euismod neque. Pellentesque luctus mauris nunc, id elementum lorem lobortis a. Sed ullamcorper dui ullamcorper efficitur efficitur. Curabitur at dui non erat semper sodales ut at nibh. Donec rutrum sed ex vitae lacinia. Fusce in metus justo. Integer facilisis diam nulla, ac laoreet erat sagittis at.
-</p>
-</div>
-</div>
-</div>
-<div class="row tmser">
-<div class="col-lg-4 col-md-6">
-<div class="service_item_07 text-center">
-<div class="ibMeta">
-<i class="bpro-analytics-2"></i>
-</div>
-<h3><a href="single-service.html">Advanced Analytic</a></h3>
-<h5>Growth, Focus</h5>
-<p>Lorem ipsum dolor sit aconsectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et</p>
-<a class="srm" href="single-service.html"><i class="twi-long-arrow-alt-right1"></i></a>
-</div>
-</div>
-<div class="col-lg-4 col-md-6">
-<div class="service_item_07 text-center">
-<div class="ibMeta">
-<i class="bpro-puzzle-2"></i>
-</div>
-<h3><a href="single-service.html">Corporate Finance</a></h3>
-<h5>Strategy Foundation.</h5>
-<p>Lorem ipsum dolor sit aconsectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et</p>
-<a class="srm" href="single-service.html"><i class="twi-long-arrow-alt-right1"></i></a>
-</div>
-</div>
-<div class="col-lg-4 col-md-6">
-<div class="service_item_07 text-center">
-<div class="ibMeta">
-<i class="bpro-partners-icons-12"></i>
-</div>
-<h3><a href="single-service.html">Business Consultation</a></h3>
-<h5>Professional skilled Team.</h5>
-<p>Lorem ipsum dolor sit aconsectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et</p>
-<a class="srm" href="single-service.html"><i class="twi-long-arrow-alt-right1"></i></a>
-</div>
-</div>
-</div>
-<div class="row">
-<div class="col-lg-12 tmDesc">
-<p>
-Cras quis nunc magna. Etiam sed felis eu lorem scelerisque sagittis. Praesent sed arcu quis felis tempus egestas. Proin nec orci eget mi aliquam congue. Nunc mauris sem, imperdiet vel nunc a, bibendum efficitur nunc. Phasellus at neque eu sem rutrum vestibulum.
-</p>
-<p>
-Vivamus nec ligula et leo sodales pellentesque id sed lectus. Aliquam viverra velit sagittis pharetra venenatis. Etiam ut euismod neque. Pellentesque luctus mauris nunc, id elementum lorem lobortis a. Sed ullamcorper dui ullamcorper efficitur efficitur. Curabitur at dui non erat semper sodales ut at nibh. Donec rutrum sed ex vitae lacinia. Fusce in metus justo. Integer facilisis diam nulla, ac laoreet erat sagittis at. Duis sodales eleifend aliquet. Cras in justo varius, dictum mauris ut, pulvinar metus
-</p>
-</div>
-</div>
-</div>
-</section>
 
 
-<footer class="footer_04 blogFooter">
-<div class="container largeContainer">
-<div class="row">
-<div class="col-lg-12">
-<div class="fcta">
-<div class="row">
-<div class="col-md-7">
-<h3>Ready to Get Free Consulations<br> Any kind Of It Solutions?</h3>
+<div class="container mt-5">
+    <div class="loan-container">
+        <div class="card p-4 shadow-lg">
+            <h4 class="text-center mb-4">Loan Calculator</h4>
+            <div class="mb-3">
+                <label for="borrowAmount" class="form-label">Loan Amount</label>
+                <input type="number" id="borrowAmount" class="form-control" min="100000" max="10000000" placeholder="Enter amount" oninput="calculateLoan()">
+            </div>
+            <div class="mb-3">
+                <label for="borrowDuration" class="form-label">Duration (Months)</label>
+                <input type="number" id="borrowDuration" class="form-control" min="1" max="18" placeholder="Enter duration" oninput="calculateLoan()">
+            </div>
+            <div class="mb-3 text-center">
+                <p class="fw-bold">Interest Rate: <span class="text-primary">3% per month</span></p>
+            </div>
+            <div class="mb-3 text-center">
+                <p class="fw-bold">Monthly Repayment: <span id="monthlyRepayment">₦0.00</span></p>
+            </div>
+            <div class="text-center">
+                <a href="contact.html" target="_blank" class="btn btn-primary w-100">Request Loan</a>
+            </div>
+        </div>
+    </div>
 </div>
-<div class="col-md-5 text-right">
-<a class="berpo_btn with_icon03" href="contact.html">Get A Quote<i class="twi-arrow-right1"></i></a>
-<a class="berpo_btn with_icon03" href="contact.html">Read More<i class="twi-arrow-right1"></i></a>
-</div>
-</div>
-</div>
-</div>
-</div>
-<div class="row">
-<div class="col-md-6 col-xl-4">
-<div class="aboutWidget04">
-<h4>About us</h4>
-<p>
-Lorem ipsum dolor sit amet, sectetur adipisicing elit, sed do eiusmod mpor incididunt ut labore et dolore Lorem ipsum dolor sit amet, sectetur adipisicing elit, sed do eiusmod
-</p>
-<a href="javascript:void(0);"><i class="twi-facebook-square"></i></a>
-<a href="javascript:void(0);"><i class="twi-twitter"></i></a>
-<a href="javascript:void(0);"><i class="twi-instagram"></i></a>
-<a href="javascript:void(0);"><i class="twi-pinterest"></i></a>
-</div>
-</div>
-<div class="col-md-6 col-xl-2">
-<div class="widget wmenu03">
-<h3 class="widget_title03">Quick Links</h3>
-<ul class="menu">
-<li><a href="javascript:void(0);">Home</a></li>
-<li><a href="javascript:void(0);">Leadership</a></li>
-<li><a href="javascript:void(0);">Teams</a></li>
-<li><a href="javascript:void(0);">Privacy Policy</a></li>
-<li><a href="javascript:void(0);">Licenses</a></li>
-</ul>
-</div>
-</div>
-<div class="col-md-6 col-xl-3 fww03">
-<div class="widget">
-<h3 class="widget_title03">Contact Info</h3>
-<div class="cinfo"><span>Address:</span>Orange, USA</div>
-<div class="cinfo"><span>Email:</span><a href="https://themewar.com/cdn-cgi/l/email-protection" class="__cf_email__" data-cfemail="402538212d302c25002d21292c6e232f2d">[email&#160;protected]</a></div>
-<div class="cinfo"><span>Phone:</span>+880 123 456 789</div>
-<div class="cinfo"><span>Work Time:</span><br>Mon-Fri:: 08.00 - 16.00</div>
-</div>
-</div>
-<div class="col-md-6 col-xl-3 fww03">
-<div class="widget wmenu03">
-<h3 class="widget_title03">Our Services</h3>
-<ul class="menu">
-<li><a href="javascript:void(0);">Evaluation</a></li>
-<li><a href="javascript:void(0);">Migrate</a></li>
-<li><a href="javascript:void(0);">Study</a></li>
-<li><a href="javascript:void(0);">Counselling</a></li>
-<li><a href="javascript:void(0);">Online Payment</a></li>
-</ul>
-</div>
-</div>
-</div>
-<div class="row">
-<div class="col-lg-12 text-center">
-<div class="Copyright">©copyright 2021 by <a href="https://themewar.com/">Themewar</a></div>
-</div>
-</div>
-</div>
-</footer>
+
 
 
 <a href="javascript:void(0);" id="backtotop"><i class="twi-arrow-to-top1"></i></a>
@@ -541,7 +298,29 @@ Lorem ipsum dolor sit amet, sectetur adipisicing elit, sed do eiusmod mpor incid
 <script src="assets/js/extensions/revolution.extension.video.min.js"></script>
 <script src="assets/js/theme.js"></script>
 
+
+<script>
+  function calculateLoan() {
+      let amount = parseFloat(document.getElementById('loanAmount').value);
+      let months = parseInt(document.getElementById('loanTerm').value);
+      
+      if (isNaN(amount) || isNaN(months) || months <= 0) {
+          document.getElementById('monthlyPayment').innerText = "Please enter valid values.";
+          document.getElementById('totalRepayment').innerText = "";
+          return;
+      }
+      
+      let baseRate = 0.20; // 20% per month
+      let rate = baseRate / Math.sqrt(months); // Decreasing rate for longer terms
+      let monthlyPayment = (amount * rate) / (1 - Math.pow(1 + rate, -months));
+      let totalRepayment = monthlyPayment * months;
+      
+      document.getElementById('monthlyPayment').innerText = `Monthly Payment: $${monthlyPayment.toFixed(2)}`;
+      document.getElementById('totalRepayment').innerText = `Total Repayment: $${totalRepayment.toFixed(2)}`;
+  }
+</script>
+
 </body>
 
-<!-- Mirrored from themewar.com/html/bepro/single-team.html by HTTrack Website Copier/3.x [XR&CO'2014], Thu, 17 Oct 2024 13:06:35 GMT -->
+<!-- Mirrored from themewar.com/html/bepro/index.html by HTTrack Website Copier/3.x [XR&CO'2014], Thu, 17 Oct 2024 13:01:32 GMT -->
 </html>
