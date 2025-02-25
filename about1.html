@@ -34,6 +34,63 @@
         font-weight: bold;
         color: #fff; /* Dark blue color */
     }
+
+    
+    .loan-container {
+        max-width: 500px;
+        margin: auto;
+    }
+    .card {
+        border-radius: 15px;
+    }
+
+  .interactive-card {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background: #f8f9fa;
+    padding: 20px;
+    border-radius: 10px;
+    transition: background 0.3s, transform 0.3s;
+    cursor: pointer;
+}
+
+.interactive-card:hover {
+    background: #ADD8E6;
+    color: white;
+    transform: translateY(-5px);
+}
+
+.interactive-card:hover .title,
+.interactive-card:hover .sub-title,
+.interactive-card:hover .svg-path {
+    color: white;
+    stroke: white;
+}
+
+.title {
+    color: #ADD8E6;
+    font-weight: bold;
+}
+
+.sub-title {
+    color: #ADD8E6;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    font-weight: bold;
+}
+
+.svg-path {
+    stroke: #ADD8E6;
+}
+
+.img-card img {
+    width: 80px;
+    height: auto;
+}
+
+
 </style>
 </head>
 <body>
@@ -154,7 +211,7 @@
         </div> -->
         </li>
         <li class="">
-        <a href="about1.html">ABOUT</a>
+        <a href="about1.html">ABOUT US</a>
         <!-- <ul class="sub-menu">
         <li class="menu-item-has-children">
         <a href="javascript:void(0);">Services Page</a>
@@ -193,9 +250,9 @@
         </li>
         </ul> -->
         </li>
-          <li class="sub-menu">
+          <!-- <li class="sub-menu">
         <a href="FAQs.html">FAQs</a>
-        <!-- <ul class="sub-menu">
+        <ul class="sub-menu">
         <li class="menu-item-has-children">
         <a href="javascript:void(0);">Safe Lock</a>
         <ul class="sub-menu">
@@ -222,8 +279,8 @@
         </ul>
         </li>
         
-        </ul>  -->
-        </li> 
+        </ul> 
+        </li>  -->
         <!-- <li class="">
         <a href="blog1.html">BLOG</a>
         <ul class="sub-menu">
@@ -265,7 +322,7 @@
         <span class="bp-shape"></span>
         <span class="bp-shape"></span>
         <span class="bp-shape"></span>
-        <span style="font-size:20px;" class="bp-text">Contact Us</span>
+        <span style="font-size:25px;" class="bp-text">Contact Us</span>
         </a>
         </div>
         </div>
@@ -323,27 +380,10 @@ Our current focus is investing in Micro, Small, and Medium Enterprises (MSMEs), 
 
 
 </p>
-<h3>
-    Contacts:
-</h3>
-<ul class="listItem">
-<li><i class="twi-check-circle"></i>
-    Phone: <br>
-    Office:- +2347025251599<br>
-    Mobile: +2348060875751
-    
-</li>
-<li><i class="twi-check-circle"></i>
-    Email:<br>
-    info@quivertrustltd.com.ng
-</li>
-<li><i class="twi-check-circle"></i>
-    Address:<br>
-    9b Ibironke Crescent, Mende, Maryland, Lagos.
-    </li>
-<!-- <li><i class="twi-check-circle"></i>Business Advisory Services: Expert guidance and mentorship to help small businesses grow and thrive.</li> -->
-</ul>
-<a class="berpo_btn with_icon04" href="contact.html"><span class="bp-shape"></span><span class="bp-shape"></span><span class="bp-shape"></span><span class="bp-shape"></span><span class="bp-text">Contact<i class="twi-arrow-right"></i></span></a>
+
+
+
+
 </div>
 <div class="col-lg-7">
 <div class="abpageThumb">
@@ -357,6 +397,96 @@ Our current focus is investing in Micro, Small, and Medium Enterprises (MSMEs), 
 </div>
 </section>
 
+
+<section class="service_section_09">
+    <div class="container largeContainer">
+   
+    <div class="row">
+      <div class="col-lg-6 col-md-12">
+        <div class="container mt-5">
+          <div class="interactive-card">
+              <div>
+                  <h5 class="title">Mission
+                     </h5>
+                  <p class="text">Our mission is to provide trusted financial solutions through lending, investment oppoutunities, and expert consulting, all designed to help you achieve your goals while building lasting,reliable relationships.</p>
+                  <!-- <div class="sub-title">
+                      <svg width="30" height="30" viewBox="0 0 30 30" fill="none" xmlns="http://www.w3.org/2000/svg">
+                          <path d="M15 10L20 15L15 20" stroke="#003399" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="svg-path"></path>
+                          <path d="M4 4V11C4 12.0609 4.42143 13.0783 5.17157 13.8284C5.92172 14.5786 6.93913 15 8 15H20" stroke="#003399" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="svg-path"></path>
+                      </svg>
+                      <span>Quiver Trust</span>
+                  </div> -->
+              </div>
+              <!-- <div class="img-card">
+                  <img src="assets/images/about/4.jpg" alt="Savings">
+              </div> -->
+          </div>
+      </div>
+      </div>
+      <div class="col-lg-6 col-md-12">
+        <div class="container mt-5">
+          <div class="interactive-card">
+              <div>
+                  <h5 class="title">Vision
+                  </h5>
+                  <p class="text">   To be your most trusted ally in delivering financial solutions and your first choice for every financial need.</p>
+                  <!-- <div class="sub-title">
+                      <svg width="30" height="30" viewBox="0 0 30 30" fill="none" xmlns="http://www.w3.org/2000/svg">
+                          <path d="M15 10L20 15L15 20" stroke="#003399" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="svg-path"></path>
+                          <path d="M4 4V11C4 12.0609 4.42143 13.0783 5.17157 13.8284C5.92172 14.5786 6.93913 15 8 15H20" stroke="#003399" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="svg-path"></path>
+                      </svg>
+                      <span>Quiver Trust</span>
+                  </div> -->
+              </div>
+              <!-- <div class="img-card">
+                  <img src="assets/images/about/a6.jpg" alt="Savings">
+              </div> -->
+          </div>
+      </div>
+        </div>
+      
+      </div>
+    </div>
+  </section>
+
+  <section class="aboutPageSection01">
+    <div class="container largeContainer">
+    <div class="row">
+    <div class="col-lg-5">
+    
+    <h3>
+        Contacts:
+    </h3>
+    <ul class="listItem">
+    <li><i class="twi-check-circle"></i>
+        Phone: <br>
+        Office:- +2347025251599<br>
+        Mobile: +2348060875751
+        
+    </li>
+    <li><i class="twi-check-circle"></i>
+        Email:<br>
+        info@quivertrustltd.com.ng
+    </li>
+    <li><i class="twi-check-circle"></i>
+        Address:<br>
+        9b Ibironke Crescent, Mende, Maryland, Lagos.
+        </li>
+    <!-- <li><i class="twi-check-circle"></i>Business Advisory Services: Expert guidance and mentorship to help small businesses grow and thrive.</li> -->
+    </ul>
+    <a class="berpo_btn with_icon04" href="contact.html"><span class="bp-shape"></span><span class="bp-shape"></span><span class="bp-shape"></span><span class="bp-shape"></span><span class="bp-text">Contact<i class="twi-arrow-right"></i></span></a>
+    </div>
+    <div class="col-lg-7">
+    <div class="abpageThumb">
+    <img src="assets/images/me/free.jpg" alt>
+    <div class="abInner">
+    <img src="assets/images/in.jpg" alt>
+    </div>
+    </div>
+    </div>
+    </div>
+    </div>
+    </section>
 
 <section class="service_section_09">
 <div class="container largeContainer">
@@ -401,40 +531,17 @@ Our current focus is investing in Micro, Small, and Medium Enterprises (MSMEs), 
 </div>
 </section>
 
-<footer class="footer_02 footer_07">
-    <div class="container largeContainer">
-    <div class="row">
-    <div class="col-lg-12">
-    <div class="ctaFooter">
-    <div style="height: fit-content; color:aliceblue;" class="ctaboxItem">
-    <img src="assets/images/home2/2.png" alt>
-    <i class="twi-arrow-to-top"></i>
-    <h5>Mission</h5>
-    <a>Our mission is to provide trusted financial solutions through lending, investment oppoutunities, and expert consulting, all designed to help you achieve your goals while building lasting,reliable relationships.</a>
-    </div>
-    <div style="height: fit-content; color:aliceblue;" class="ctaboxItem">
-    <img src="assets/images/home2/3.png" alt>
-    <i class="twi-coins"></i>
-    <h5>Vision</h5>
-    <a>To be your most trusted ally in delivering financial solutions and your first choice for every financial need.</a>
-    </div>
-    </div>
-    </div>
-    </div>
-    </div>
-    </footer>
-    
 
 <section class="teamSection01 abtmPad">
 <div class="container largeContainer">
 <div class="row">
 <div class="col-lg-12 text-center">
 <!-- <div class="subTitle">Our Memebers</div> -->
-<h2 class="secTitle">Our CEO</h2>
+<h2 class="secTitle">CEO</h2>
 </div>
 </div>
 <div class="row">
-<div class="col-lg-4 col-md-6">
+<!-- <div class="col-lg-4 col-md-6">
 <div class="team_01 text-center">
 <div class="tm_thumb">
 <img src="assets/images/about/victor_image.jpg" alt>
@@ -445,21 +552,26 @@ Our current focus is investing in Micro, Small, and Medium Enterprises (MSMEs), 
 <h3><a href="single-team.html">CEO</a></h3>
 <p>Web Designer</p>
 </div>
-</div>
-<div class="col-lg-4 col-md-6">
+</div> -->
+<div class="col-lg-12 col-md-12">
 <div class="team_01 text-center">
 <div class="tm_thumb">
-<img src="assets/images/about/victor_image.jpg" alt>
+<img style="width: 40%; height: 50%; " src="assets/images/about/victor_image.jpg" alt>
 <div class="tm_social">
 
 
 </div>
 </div>
-<h3><a href="single-team.html">CEO</a></h3>
-<p>Web Developer</p>
+<h3><a href="single-team.html">Olushola Olurotimi Alao 
+    Chief Executive Officer, Quiver Trust
+    
+</a></h3>
+<span style="text-align: left;">    Olushola Olurotimi Alao is a seasoned professional banker with over 25 years of experience in the financial services sector. He is an Associate Member of the Chartered Institute of Bankers of Nigeria (CIBN) and a Member of the Chartered Banking Institute in Scotland, UK. Olushola also holds two prestigious Master of Business Administration (MBA) degrees, one from the University of Ilorin and another from Bangor University in Bangor, Wales. Additionally, he is a member of the Nigerian Institute of Management. 
+    
+    Throughout his distinguished career, Olushola has demonstrated a deep commitment to the growth and development of Small and Medium Enterprises (SMEs) in Nigeria. Having worked with several leading Nigerian banks, he has successfully helped numerous SMEs scale their operations and achieve sustainable success. His expertise in banking, business development, and financial strategy is invaluable to Quiver Trust as he continues to lead the company toward fulfilling its mission of empowering businesses through accessible financial solutions.</span>
 </div>
 </div>
-<div class="col-lg-4 col-md-6">
+<!-- <div class="col-lg-4 col-md-6">
 <div class="team_01 text-center">
 <div class="tm_thumb">
 <img src="assets/images/about/victor_image.jpg" alt>
@@ -470,7 +582,7 @@ Our current focus is investing in Micro, Small, and Medium Enterprises (MSMEs), 
 <h3><a href="single-team.html">CEO</a></h3>
 <p>Business Expert</p>
 </div>
-</div>
+</div> -->
 </div>
 </div>
 </section>
@@ -557,14 +669,13 @@ Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor i
 </div>
 </footer> -->
 
-
 <footer class="footer_01">
     <div class="container largeContainer">
     <div class="row">
     <div class="col-md-6 col-xl-4">
     <div class="aboutWidget">
-    <a href="index.html"><img src="assets/images/QTLOGO123.png" alt></a>
-    <p>Welcome to Quiver trust, a Trusted microfinance company dedicated to transforming lives and empowering communities through innovative financial solutions.
+    <a href="index.html"><img src="assets/images/rmlogo.png" alt></a>
+    <p style="color: black;">Welcome to Quiver Trust, a trusted microfinance company dedicated to transforming lives and empowering communities through innovative financial solutions.
     </p>
     </div>
     </div>
@@ -592,12 +703,12 @@ Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor i
     <div class="col-md-6 col-xl-4">
     <div class="widget">
     <!-- <div class="wsubtitle">Clean & Flexible</div> -->
-    <h3 class="widget_title">Quick Links</h3>
+    <h3 style="color: black;" class="widget_title">Quick Links</h3>
     <ul class="menu">
-    <li><a href="index.html">HOME</a></li>
-    <li><a href="about1.html">ABOUT</a></li>
-    <li><a href="service1.html">SERVICES</a></li>
-    <li><a href="FAQs.html">FAQs</a></li>
+    <li><a style="color: black;" href="index.html">HOME</a></li>
+    <li><a style="color: black;" href="about1.html">ABOUT</a></li>
+    <li><a style="color: black;" href="service1.html">SERVICES</a></li>
+    <li><a style="color: black;" href="FAQs.html">FAQs</a></li>
     <!-- <li><a href="javascript:void(0);">BLOG</a></li> -->
     </ul>
     </div>
@@ -605,10 +716,10 @@ Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor i
     <div class="col-md-6 col-xl-4">
     <div class="widget gallery">
     <!-- <div class="wsubtitle">Contact us</div> -->
-    <h3 class="widget_title">Contact us</h3>
-    <div class="abIcon"><i class="twi-map-marker"></i> 9b Ibironke Crescent  Mende, Maryland, Lagos.</div>
-    <div class="abIcon"><i class="twi-envelope"></i><a href="https://themewar.com/cdn-cgi/l/email-protection" class="__cf_email__" data-cfemail="580b2d2828372a2c183c3735393136763b3735" style="color: white;">info@quivertrustltd.com.ng</a></div>
-    <div class="abIcon"><i class="twi-phone"></i>+2348060875751</div>
+    <h3 style="color: black;" class="widget_title">Contact us</h3>
+    <div class="abIcon" style="color: black;"><i class="twi-map-marker"></i> 9b Ibironke Crescent  Mende, Maryland, Lagos.</div>
+    <div class="abIcon"><i class="twi-envelope"></i><a href="https://themewar.com/cdn-cgi/l/email-protection" class="__cf_email__" data-cfemail="580b2d2828372a2c183c3735393136763b3735" style="color: #000;">info@quivertrustltd.com.ng</a></div>
+    <div class="abIcon" style="color: black;"><i class="twi-phone"></i>+2348060875751</div>
     
     </div>
     </div>
