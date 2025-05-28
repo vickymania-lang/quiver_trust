@@ -146,7 +146,7 @@
 <div class="col-lg-12">
 <div class="navbar01">
 <div class="logo">
-<a href="index.html"><img style=" height: 90px; " src="assets/images/QTLOGO1234.png"  alt="berpo"></a>
+<a href="index.html"><img style=" height: 90px;" src="assets/images/QTLOGO1234.png"  alt="berpo"></a>
 </div>
 <a href="javascript:void(0)" class="menu_btn"><i class="twi-bars2"></i></a>
 <nav class="mainMenu">
@@ -262,6 +262,28 @@
 </li>
 </ul> -->
 </li>
+<li id="contact-menu" class="">
+    <a href="contact.html">CONTACT</a>
+    <!-- <ul class="sub-menu">
+    <li class="menu-item-has-children">
+    <a href="javascript:void(0);">Portfolio Page</a>
+    <ul class="sub-menu">
+    <li><a href="folio1.html">Portfolio 01</a></li>
+    <li><a href="folio2.html">Portfolio 02</a></li>
+    <li><a href="folio3.html">Portfolio 03</a></li>
+    
+    </ul>
+    </li>
+    <li class="menu-item-has-children">
+    <a href="javascript:void(0);">Portfolio Details</a>
+    <ul class="sub-menu">
+    
+    <li><a href="single-folio2.html">Portfolio Details 02</a></li>
+    
+    </ul>
+    </li>
+    </ul> -->
+    </li>
   <!-- <li class="sub-menu">
 <a href="FAQs.html">FAQs</a>
 ul class="sub-menu">
@@ -419,7 +441,7 @@ ul class="sub-menu">
   <div class="row">
   <div class="col-xl-12 text-center">
   <!-- <div class="subTitle">Our Services</div> -->
-  <h2 class="secTitle">Our Services</h2>
+  <!-- <h2 class="secTitle">Our Services</h2> -->
   </div>
   </div>
   <div class="row">
@@ -1384,13 +1406,13 @@ We craft unique digital experiences. With more than 7 years of expertise we desi
 <h4><span>We're</span>Building a</h4>
 <h2>Financial</h2>
 <h3><span>Future</span> Together</h3>
-<a class="berpo_btn" href="contact.html">
+<!-- <a class="berpo_btn" href="contact.html">
 <span class="bp-shape"></span>
 <span class="bp-shape"></span>
 <span class="bp-shape"></span>
 <span class="bp-shape"></span>
 <span class="bp-text">Contact Us</span>
-</a>
+</a> -->
 </div>
 </div>
 <div class="col-md-7">
@@ -1470,7 +1492,7 @@ We craft unique digital experiences. With more than 7 years of expertise we desi
 <div class="col-lg-8 col-md-7">
 <div class="SubsrcribeForm">
 <form class="yikes-easy-mc-form" action="#" method="post">
-<input type="email" name="EMAIL" placeholder="Enter Your Email Address">
+<input type="email" name="EMAIL" placeholder="Enter Your Email Address for news letter">
 <button class="yikes-easy-mc-submit-button" type="submit">Submit</button>
 </form>
 </div>
@@ -1520,7 +1542,12 @@ We craft unique digital experiences. With more than 7 years of expertise we desi
 <script src="assets/js/extensions/revolution.extension.video.min.js"></script>
 <script src="assets/js/theme.js"></script>
 
-
+<script>
+    // Check screen width and apply inline style if larger than 768px
+    if (window.innerWidth > 768) {
+        document.getElementById("contact-menu").style.display = "none";
+    }
+</script>
 
 </body>
 
