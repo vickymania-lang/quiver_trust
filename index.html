@@ -128,6 +128,47 @@ element.style{
         document.getElementById("monthlyRepayment").innerText = `₦${monthlyPayment.toFixed(2)}`;
     }
 </script>
+
+
+    <!-- form submission -->
+
+    <script>
+        document.addEventListener("DOMContentLoaded", function() {
+            const form = document.getElementById('contact-form');
+            form.addEventListener('submit', function(event) {
+                event.preventDefault();
+                const formData = new FormData(form);
+                fetch('https://formspree.io/f/xnnvbpjp', {
+                    method: 'POST',
+                    body: formData,
+                    headers: {
+                        'Accept': 'application/json'
+                    }
+                }).then(response => {
+                    if (response.ok) {
+                        alert('Email sent successfully!');
+                        form.reset();
+                        window.location.href = 'index.html'; // Redirect to home page
+                        // Or use window.location.href = window.location.pathname; to stay on the same page
+                    } else {
+                        response.json().then(data => {
+                            if (data.errors) {
+                                alert('Failed to send email: ' + data.errors.map(error => error.message).join(', '));
+                            } else {
+                                alert('Failed to send email.');
+                            }
+                        });
+                    }
+                }).catch(error => {
+                    alert('Failed to send email: ' + error.message);
+                });
+            });
+        });
+    </script>
+
+
+
+
 </head>
 <body>
 
@@ -449,16 +490,6 @@ ul class="sub-menu">
 </section>
 
 
-<!-- <section class="serviceSectionTitle">
-<div class="container largeContainer">
-<div class="row">
-<div class="col-xl-12 text-center">
-<div class="subTitle">Services</div>
-<h2 class="secTitle">OUR SERVICES</h2>
-</div>
-</div>
-</div>
-</section> -->
 
 <section class="service_section_09">
   <div class="container largeContainer">
@@ -643,96 +674,6 @@ ul class="sub-menu">
     </div>
   </section>
 
-<!-- <section class="service_section_01">
-<div class="container largeContainer">
-<div class="row mt139">
-<div class="col-lg-4 col-md-6">
-<div class="service_item_01">
-<div class="siThumb">
-<img src="assets/images/me/exchangemoney.JPG" alt>
-</div>
-<div class="sitem_con">
-<div class="ibMeta">
-<i class="bpro-keyword"></i>
-</div>
-<h3><a href="single-service.html">INVESTING</a></h3>
-<p>Invest in your future today, and watch your wealth grow tomorrow.</p>
-</div>
-</div>
-</div>
-<div class="col-lg-4 col-md-6">
-<div class="service_item_01">
-<div class="siThumb">
-<img src="assets/images/me/manhandgivingmoney.JPG" alt>
-</div>
-<div class="sitem_con">
-<div class="ibMeta">
-<i class="bpro-presentation-2"></i>
-</div>
-<h3><a href="single-service.html">BORROWING</a></h3>
-<p>Smart borrowing starts your journey to financial freedom.</p>
-</div>
-</div>
-</div>
-<div class="col-lg-4 col-md-6">
-<div class="service_item_01">
-<div class="siThumb">
-<img src="assets/images/me/handmoney.JPG" alt>
-</div>
-<div class="sitem_con">
-<div class="ibMeta">
-<i class="bpro-consultation"></i>
-</div>
-<h3><a href="single-service.html">BUSINESS CONSULTATION</a></h3>
-<p>Transforming challenges into opportunities for your business success.</p>
-</div>
-</div>
-</div>
-</div>
-<div class="row">
-<div class="col-lg-12 text-center">
-<div class="qu_link">Stop wasting time and Money on Finance. <a href="javascript:void(0);">Quiver Trust</a></div>
-</div>
-</div>
-</div>
-</section> -->
-<!--
-
-<section class="aboutSection01">
-<div class="container largeContainer">
-<div class="row">
-<div class="col-lg-6">
-<div class="abThumb">
-<img src="assets/images/home1/about.png" alt>
-</div>
-</div>
-<div class="col-lg-6">
-<div class="abCon1">
-<div class="subTitle">About Us</div>
-<h2 class="secTitle">Make friend with Quiver Trust Limited</h2>
-<p>
-    At Quiver Trust Limited, we are dedicated to partnering with you to meet your diverse financial needs. With our extensive experience in banking, we possess the expertise and resources to help you achieve your financial goals. 
-</p>
-<div class="row">
-<div class="col-md-6">
-<div class="skrItem">
-<div class="circle-skill" data-bg="#ebebeb" data-skills="0.80" data-gradientstart="#bb0b0b" data-gradientend="#bb0b0b"><strong></strong><i class="twi-chart-pie1"></i></div>
-<h5>Advanced Analytic</h5>
-</div>
-</div>
-<div class="col-md-6 mleft">
-<div class="skrItem">
-<div class="circle-skill" data-bg="#ebebeb" data-skills="0.65" data-gradientstart="#bb0b0b" data-gradientend="#bb0b0b"><strong></strong><i class="twi-corn1"></i></div>
-<h5>Corporate Finance</h5>
-</div>
-</div>
-</div>
-</div>
-</div>
-</div>
-</div>
-</section>
--->
 
 <section class="consultSectionTitle">
 <div class="container largeContainer">
@@ -769,22 +710,22 @@ ul class="sub-menu">
 <div class="contact_form">
 <h5>Get Started with</h5>
 <p>Quiver Trust Limited</p>
-<form action="#" method="post" id="contact_form">
+<form method='POST' action="https://formspree.io/f/xnnvbpjp" id="contact-form">
 <div class="input-field">
 <i class="twi-user"></i>
-<input class="required" type="text" name="con_name" placeholder="Your Name">
+<input class="required" type="text" name="name" placeholder="Your Name">
 </div>
 <div class="input-field">
 <i class="twi-phone"></i>
-<input type="text" name="con_phone" placeholder="Phone Number">
+<input type="text" name="con_phone" placeholder="phone">
 </div>
 <div class="input-field">
 <i class="twi-edit"></i>
-<input class="required" type="text" name="con_subject" placeholder="Subject Name">
+<input class="required" type="text" name="message" placeholder="Subject Name">
 </div>
 <div class="input-field">
 <i class="twi-envelope"></i>
-<input class="required" type="email" name="con_email" placeholder="Your Email Address">
+<input class="required" type="email" name="email" placeholder="Your Email Address">
 </div>
 <button type="submit" class="berpo_btn"><span class="bp-shape"></span><span class="bp-shape"></span><span class="bp-shape"></span><span class="bp-shape"></span><span class="bp-text">Submit Now</span></button>
 <div class="con_message"></div>
@@ -799,628 +740,7 @@ ul class="sub-menu">
 </section>
 
 
-<!-- <section class="service_section_02">
-<div class="container largeContainer">
-<div class="row">
-<div class="col-xl-12 text-center">
-<div class="subTitle">Services</div>
-<h2 class="secTitle">Provide Services</h2>
-</div>
-</div>
-<div class="row">
-<div class="col-xl-4 col-md-6">
-<div class="service_item_02">
-<div class="stpmeta">
-<div class="ibMeta">
-<i class="bpro-diagram"></i>
-<svg baseProfile="tiny-ps" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 80 64" width="80" height="64">
-<g>
-<g>
-<g>
-<path class="shp0" d="M45.83 4.57C56.14 -0.22 65.26 -2.28 71.52 3.47C77.87 8.76 81.07 21.38 79.26 31.02C76.19 52.69 53.42 55.41 36.54 61.38C28.41 64.21 19.7 63.96 12.37 58.84C5.17 54.01 -0.66 44.32 0.06 35.3C1.33 14.74 25.04 14.2 45.83 4.57" />
-</g>
-</g>
-</g>
-</svg>
-</div>
-<h3><a href="single-service.html">App Development</a></h3>
-</div>
-<p>We craft unique digital experiences. With more than 7 years of expertise we design and code clean</p>
-</div>
-</div>
-<div class="col-xl-4 col-md-6">
-<div class="service_item_02 si02">
-<div class="stpmeta">
-<div class="ibMeta">
-<i class="bpro-idea"></i>
-<svg baseProfile="tiny-ps" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 80 64" width="80" height="64">
-<g>
-<g>
-<g>
-<path class="shp0" d="M45.83 4.57C56.14 -0.22 65.26 -2.28 71.52 3.47C77.87 8.76 81.07 21.38 79.26 31.02C76.19 52.69 53.42 55.41 36.54 61.38C28.41 64.21 19.7 63.96 12.37 58.84C5.17 54.01 -0.66 44.32 0.06 35.3C1.33 14.74 25.04 14.2 45.83 4.57" />
-</g>
-</g>
-</g>
-</svg>
-</div>
-<h3><a href="single-service.html">Digital Services</a></h3>
-</div>
-<p>We craft unique digital experiences. With more than 7 years of expertise we design and code clean</p>
-</div>
-</div>
-<div class="col-xl-4 col-md-6">
-<div class="service_item_02 si03">
-<div class="stpmeta">
-<div class="ibMeta">
-<i class="bpro-browser"></i>
-<svg baseProfile="tiny-ps" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 80 64" width="80" height="64">
-<g>
-<g>
-<g>
-<path class="shp0" d="M45.83 4.57C56.14 -0.22 65.26 -2.28 71.52 3.47C77.87 8.76 81.07 21.38 79.26 31.02C76.19 52.69 53.42 55.41 36.54 61.38C28.41 64.21 19.7 63.96 12.37 58.84C5.17 54.01 -0.66 44.32 0.06 35.3C1.33 14.74 25.04 14.2 45.83 4.57" />
-</g>
-</g>
-</g>
-</svg>
-</div>
-<h3><a href="single-service.html">Automated Software</a></h3>
-</div>
-<p>We craft unique digital experiences. With more than 7 years of expertise we design and code clean</p>
-</div>
-</div>
-<div class="col-xl-4 col-md-6">
-<div class="service_item_02 si04">
-<div class="stpmeta">
-<div class="ibMeta">
-<i class="bpro-question"></i>
-<svg baseProfile="tiny-ps" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 80 64" width="80" height="64">
-<g>
-<g>
-<g>
-<path class="shp0" d="M45.83 4.57C56.14 -0.22 65.26 -2.28 71.52 3.47C77.87 8.76 81.07 21.38 79.26 31.02C76.19 52.69 53.42 55.41 36.54 61.38C28.41 64.21 19.7 63.96 12.37 58.84C5.17 54.01 -0.66 44.32 0.06 35.3C1.33 14.74 25.04 14.2 45.83 4.57" />
-</g>
-</g>
-</g>
-</svg>
-</div>
-<h3><a href="single-service.html">Expense Reporting</a></h3>
-</div>
-<p>We craft unique digital experiences. With more than 7 years of expertise we design and code clean</p>
-</div>
-</div>
-<div class="col-xl-4 col-md-6">
-<div class="service_item_02 si05">
-<div class="stpmeta">
-<div class="ibMeta">
-<i class="bpro-megaphone"></i>
-<svg baseProfile="tiny-ps" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 80 64" width="80" height="64">
-<g>
-<g>
-<g>
-<path class="shp0" d="M45.83 4.57C56.14 -0.22 65.26 -2.28 71.52 3.47C77.87 8.76 81.07 21.38 79.26 31.02C76.19 52.69 53.42 55.41 36.54 61.38C28.41 64.21 19.7 63.96 12.37 58.84C5.17 54.01 -0.66 44.32 0.06 35.3C1.33 14.74 25.04 14.2 45.83 4.57" />
-</g>
-</g>
-</g>
-</svg>
-</div>
-<h3><a href="single-service.html">IT Consultancy</a></h3>
-</div>
-<p>We craft unique digital experiences. With more than 7 years of expertise we design and code clean</p>
-</div>
-</div>
-<div class="col-xl-4 col-md-6">
-<div class="service_item_02 si06">
-<div class="stpmeta">
-<div class="ibMeta">
-<i class="bpro-chart"></i>
-<svg baseProfile="tiny-ps" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 80 64" width="80" height="64">
-<g>
-<g>
-<g>
-<path class="shp0" d="M45.83 4.57C56.14 -0.22 65.26 -2.28 71.52 3.47C77.87 8.76 81.07 21.38 79.26 31.02C76.19 52.69 53.42 55.41 36.54 61.38C28.41 64.21 19.7 63.96 12.37 58.84C5.17 54.01 -0.66 44.32 0.06 35.3C1.33 14.74 25.04 14.2 45.83 4.57" />
-</g>
-</g>
-</g>
-</svg>
-</div>
-<h3><a href="single-service.html">Product Engineering</a></h3>
-</div>
-<p>We craft unique digital experiences. With more than 7 years of expertise we design and code clean</p>
-</div>
-</div>
-</div>
-</div>
-</section> -->
-
-<!-- 
-<section class="achivementSection01">
-<div class="container largeContainer">
-<div class="row">
-<div class="col-xl-5">
-<div class="subTitle">Your Business Solutions are here at Quiver Trust</div>
-<h2 class="secTitle">We are Certified Financial Experts</h2>
-<p>
-We craft unique digital experiences. With more than 7<br> years of expertise.
-</p>
-<ul class="listItem withbg">
-<li><span><i class="twi-check-circle"></i>We’re All About Your Goals—Set Them, Reach Them! </span></li>
-<li><span><i class="twi-check-circle"></i>Partner with us to reach your business and personal financial targets with speed and ease.</span></li>
-<li><span><i class="twi-check-circle"></i>Flexibility at Its Best—Your Rules, Your Terms! Customize your loan terms and conditions to fit your needs!</span></li>
-<li><span><i class="twi-check-circle"></i>Success, Made Simple. 
-  No stress, no hassle—just results. Let’s make your financial journey effortless.</span></li>
-<li><span><i class="twi-check-circle"></i>“Watering and nurturing your wealth” “Just watch it grow”</span></li>
-<li><span><i class="twi-check-circle"></i>Open, transparent and here to help: Great customer service. Ask all you need to.</span></li>
-<li><span><i class="twi-check-circle"></i>Testimonials</span></li>
-<li><span><i class="twi-check-circle"></i>8.Safety for your small business till it grows into the giant it’s meant to be</span></li>
-</ul>
-<a class="berpo_btn" href="contact.html">
-<span class="bp-shape"></span>
-<span class="bp-shape"></span>
-<span class="bp-shape"></span>
-<span class="bp-shape"></span>
-<span class="bp-text">Contact Now</span>
-</a>
-</div>
-<div class="col-xl-7">
-<div class="clinetWorlwide">
-<img src="assets/images/nicediscount.jpg" alt>
-<div class="ClientNumber countfact" data-count="10000000">
-<h3><span class="counter" style="font-size: 50px;">10000000</span><sup>+</sup></h3>
-<h3>Available cash for Loan</h3>
-</div>
-</div>
-</div>
-</div>
-</div>
-</section> -->
-
-
-
-
-
-<!-- <div class="container">
-    <div class="loan-container">
-        <div class="card p-4 shadow-lg">
-            <h4 class="text-center mb-4">Get a Loan</h4>
-            <div class="mb-3">
-                <label for="borrowAmount" class="form-label">Loan Amount</label>
-                <input type="number" id="borrowAmount" class="form-control" min="100000" max="10000000" placeholder="Enter amount" oninput="calculateLoan()">
-            </div>
-            <div class="mb-3">
-                <label for="borrowDuration" class="form-label">Tenure in days</label>
-                <input type="number" id="borrowDuration" class="form-control" min="1" max="18" value="3" oninput="calculateLoan()">
-            </div>
-            <div class="mb-3 text-center">
-                <p class="fw-bold">Interest Rate: <span class="text-primary">3% per month</span></p>
-            </div>
-            <div class="mb-3 text-center">
-                <p class="fw-bold">Monthly Repayment: <span id="monthlyRepayment">₦0.00</span></p>
-            </div>
-            <div class="text-center">
-                <a href="contact.html" target="_blank" class="btn btn-primary w-100">Request Loan</a>
-            </div>
-        </div>
-    </div>
-</div> -->
-
-  
-<!-- 
-<section class="pricingSection01">
-<div class="container largeContainer">
-<div class="row">
-<div class="col-lg-12 text-center">
- -->
-
-    
-<!-- <h2 class="secTitle">Get a Loan</h2> -->
-<!-- <div class="pricingTab">
-<a href="javascript:void(0);" data-toggleclass="monthly_1" class="priceToggle active">Monthly</a>
-<a href="javascript:void(0);" data-toggleclass="yearly_1" class="priceToggle">Annual</a>
-</div> -->
-<!-- <div class=" col-lg-12 row"> -->
-<!-- <div class="col-lg-4 col-md-6">
-<div class="pricing-item-01 text-left">
-<div class="price-thumb">
-<img src="assets/images/home1/p1.jpg" alt>
-</div>
-<div class="price-detils">
-<h4 class="p-title">INVESTMENT PLAN</h4>
-<h3 class="p-price">
-<span class="price_period monthly_1 active">
-<sup class="currency"></sup>
-</span>
-<span class="price_period yearly_1">
-<sup class="currency">US$</sup>
-</span>
-</h3>
-<ul>
-<li><i class="twi-check-circle"></i>Support at $25/hour</li>
-<li><i class="twi-check-circle"></i>Product Engineering</li>
-<li><i class="twi-check-circle"></i>IT Consulting</li>
-<!-- <li><i class="twi-check-circle"></i>Free Fixes & Updates</li> -->
-<!-- <li><i class="twi-check-circle"></i>Digital Solutions</li> -->
-<!--</ul>
-<a class="berpo_btn" href="contact.html">
-<span class="bp-shape"></span>
-<span class="bp-shape"></span>
-<span class="bp-shape"></span>
-<span class="bp-shape"></span>
-<span class="bp-text">CONTACT NOW</span>
-</a>
-</div>
-</div>
-</div> -->
-<!-- <div class="col-lg-6 col-md-6 ml-auto mr-auto">
-  <div class="calculator">
-    <h2>Get a Loan</h2>
-     <label style="text-align: left;">Amount of Loan needed?</label>
-    <input class="input111" type="number" id="loanAmount" placeholder="Loan Amount" required>
-    <label style="text-align: left;">Tenure in days?</label>
-    <input class="input111" type="number" id="loanTerm" placeholder="Loan Term (months)" required>
-    <button class="button111" onclick="calculateLoan()">Calculate</button>
-    <div class="result" id="monthlyPayment"></div>
-    <div class="result" id="totalRepayment"></div>
-    <button class="button111" onclick="calculateLoan()">Contact us </button>
-</div>
-</div> -->
-<!-- <div class="col-lg-4 col-md-6">
-<div class="pricing-item-01 text-left">
-<div class="price-thumb">
-<img src="assets/images/home1/p3.jpg" alt>
-</div>
-<div class="price-detils">
-<h4 class="p-title">CONSULTATION PLAN</h4>
-<h3 class="p-price">
-<span class="price_period monthly_1 active">
-<sup class="currency">US$</sup>316<sub>.99</sub>
-</span>
-<span class="price_period yearly_1">
-<sup class="currency">US$</sup>416<sub>.99</sub>
-</span>
-</h3>
-<ul>
-<li><i class="twi-check-circle"></i>Support at $25/hour</li>
-<li><i class="twi-check-circle"></i>Product Engineering</li>
-<li><i class="twi-check-circle"></i>IT Consulting</li> -->
-<!-- <li><i class="twi-check-circle"></i>Free Fixes & Updates</li> -->
-<!-- <li><i class="twi-check-circle"></i>Digital Solutions</li> -->
-<!-- </ul>
-<a class="berpo_btn" href="contact.html">
-<span class="bp-shape"></span>
-<span class="bp-shape"></span>
-<span class="bp-shape"></span>
-<span class="bp-shape"></span>
-<span class="bp-text">CONTACT NOW</span>
-</a>
-</div>
-</div> -->
-<!-- </div>
-</div>
-</div>
-</div>
-</div>
-</section>  -->
-<!--
-
-<section class="videoSection01">
-<div class="container largeContainer">
-<div class="row">
-<div class="col-lg-12 text-center">
-<div class="subTitle">We Have added a new exciting feature in v2.0</div>
-<h2 class="secTitle">Organizations Realize the Benefits <br> Forming Work Teams.</h2>
-<a href="https://player.vimeo.com/video/213907368?h=3685456d6c" class="popup_video"><i class="twi-play"></i></a>
-</div>
-</div>
-</div>
-</section>
-
-
-<section class="tabSection01">
-<div class="container largeContainer">
-<div class="row">
-<div class="col-lg-12">
-<ul class="nav beproTab" id="beproTab" role="tablist">
-<li role="presentation">
-<a id="business-tab" data-toggle="tab" href="#business" role="tab" aria-controls="business" aria-selected="false">Business Growth</a>
-</li>
-<li role="presentation">
-<a class="active" id="financial-tab" data-toggle="tab" href="#financial" role="tab" aria-controls="financial" aria-selected="true">Financial Advice</a>
-</li>
-<li role="presentation">
-<a id="global-tab" data-toggle="tab" href="#global" role="tab" aria-controls="global" aria-selected="false">Global Solutions</a>
-</li>
-</ul>
-<div class="tab-content">
-<div class="tab-pane fade animated slideInUp2" id="business" role="tabpanel" aria-labelledby="business-tab">
-<div class="beproTabCon">
-<div class="row">
-<div class="col-md-6">
-<h2 class="secTitle">Digital Marketing Allows Big Companies</h2>
-<p>
-We craft unique digital experiences. With more than 7 years of expertise we design and code clean websites, We are committed to providing our customers with exceptional service.
-</p>
-<a class="berpo_btn" href="contact.html">
-<span class="bp-shape"></span>
-<span class="bp-shape"></span>
-<span class="bp-shape"></span>
-<span class="bp-shape"></span>
-<span class="bp-text">Contact Us</span>
-</a>
-</div>
-<div class="col-md-6">
-<img src="assets/images/home1/2.png" alt>
-</div>
-</div>
-</div>
-</div>
-<div class="tab-pane fade show active animated slideInUp2" id="financial" role="tabpanel" aria-labelledby="financial-tab">
-<div class="beproTabCon">
-<div class="row">
-<div class="col-md-6">
-<h2 class="secTitle">Digital Marketing Allows Big Companies</h2>
-<p>
-We craft unique digital experiences. With more than 7 years of expertise we design and code clean websites, We are committed to providing our customers with exceptional service.
-</p>
-<a class="berpo_btn" href="contact.html">
-<span class="bp-shape"></span>
-<span class="bp-shape"></span>
-<span class="bp-shape"></span>
-<span class="bp-shape"></span>
-<span class="bp-text">Contact Us</span>
-</a>
-</div>
-<div class="col-md-6">
-<img src="assets/images/home1/2.png" alt>
-</div>
-</div>
-</div>
-</div>
-<div class="tab-pane fade animated slideInUp2" id="global" role="tabpanel" aria-labelledby="global-tab">
-<div class="beproTabCon">
-<div class="row">
-<div class="col-md-6">
-<h2 class="secTitle">Digital Marketing Allows Big Companies</h2>
-<p>
-We craft unique digital experiences. With more than 7 years of expertise we design and code clean websites, We are committed to providing our customers with exceptional service.
-</p>
-<a class="berpo_btn" href="contact.html">
-<span class="bp-shape"></span>
-<span class="bp-shape"></span>
-<span class="bp-shape"></span>
-<span class="bp-shape"></span>
-<span class="bp-text">Contact Us</span>
-</a>
-</div>
-<div class="col-md-6">
-<img src="assets/images/home1/2.png" alt>
-</div>
-</div>
-</div>
-</div>
-</div>
-</div>
-</div>
-</div>
-</section>
-<section class="dividSection">
-<div class="container largeContainer">
-<div class="row">
-<div class="col-lg-12 text-center">
-<div class="diviborder"></div>
-</div>
-</div>
-</div>
-</section>
-
--->
-<!-- <section class="teamSection01">
-<div class="container largeContainer">
-<div class="row">
-<div class="col-lg-12 text-center">
-<div class="subTitle">Our Memebers</div>
-<h2 class="secTitle">Meet Our  <br>Team Member</h2>
-</div>
-</div>
-<div class="row">
-<div class="col-lg-12">
-<div class="tmSlider owl-carousel">
-<div class="team_01 text-center">
-<div class="tm_thumb">
-<img src="assets/images/team/1.jpg" alt>
-<div class="tm_social">
-<a href="https://www.facebook.com/"><i class="twi-facebook-square"></i>Facebook</a>
-<a href="https://twitter.com/"><i class="twi-twitter"></i>Twitter</a>
-<a href="https://linkedin.com/"><i class="twi-youtube"></i>Youtube</a>
-</div>
-</div>
-<h3><a href="single-team.html">Micheal Angelo</a></h3>
-<p>Web Designer</p>
-</div>
-<div class="team_01 text-center">
-<div class="tm_thumb">
-<img src="assets/images/team/2.jpg" alt>
-<div class="tm_social">
-<a href="https://www.facebook.com/"><i class="twi-facebook-square"></i>Facebook</a>
-<a href="https://twitter.com/"><i class="twi-twitter"></i>Twitter</a>
-<a href="https://linkedin.com/"><i class="twi-youtube"></i>Youtube</a>
-</div>
-</div>
-<h3><a href="single-team.html">Peter Omotayo</a></h3>
-<p>Web Developer</p>
-</div>
-<div class="team_01 text-center">
-<div class="tm_thumb">
-<img src="assets/images/team/3.jpg" alt>
-<div class="tm_social">
-
-</div>
-</div>
-<h3><a href="single-team.html">Mark Folahan</a></h3>
-<p>Business Expert</p>
-</div>
-<div class="team_01 text-center">
-<div class="tm_thumb">
-<img src="assets/images/team/1.jpg" alt>
-<div class="tm_social">
-
-</div>
-</div>
-<h3><a href="single-team.html">Olaitan Badmus</a></h3>
-<p>Web Designer</p>
-</div>
-</div>
-</div>
-</div>
-</div>
-</section> -->
-
-<!-- 
-<section class="testimonialSection01">
-<div class="container largeContainer">
-<div class="row">
-<div class="col-lg-12 text-center">
-<h2 class="secTitle">What Our Clients Say</h2>
-</div>
-</div>
-<div class="row">
-<div class="col-md-6">
-<div class="accordion bepAccordion" id="befAccordion01">
-<div class="card">
-<div class="card-header" id="ma_ac_01">
-<h2 class="mb-0">
-<button class="collapsed" type="button" data-toggle="collapse" data-target="#ma_collapes_01" data-aria-expanded="false" data-aria-controls="ma_collapes_01">
-<i></i> How do I get a Loan
-<span></span>
-</button>
-</h2>
-</div>
-<div id="ma_collapes_01" class="collapse" aria-labelledby="ma_ac_01" data-parent="#befAccordion01">
-<div class="card-body">
-    Check the amount you need
-</div>
-</div>
-</div>
-<div class="card">
-<div class="card-header" id="ma_ac_02">
-<h2 class="mb-0">
-<button type="button" data-toggle="collapse" data-target="#ma_collapes_02" data-aria-expanded="true" data-aria-controls="ma_collapes_02">
-<i></i> how would i pay
-<span></span>
-</button>
-</h2>
-</div>
-<div id="ma_collapes_02" class="collapse show" aria-labelledby="ma_ac_02" data-parent="#befAccordion01">
-<div class="card-body">
-Choose your payment that suit you
-</div>
-</div>
-</div>
-<div class="card">
-<div class="card-header" id="ma_ac_03">
-<h2 class="mb-0">
-<button class="collapsed" type="button" data-toggle="collapse" data-target="#ma_collapes_03" data-aria-expanded="false" data-aria-controls="ma_collapes_03">
-<i></i> How do i get paid
-<span></span>
-</button>
-</h2>
-</div>
-<div id="ma_collapes_03" class="collapse" aria-labelledby="ma_ac_03" data-parent="#befAccordion01">
-<div class="card-body">
-The money will be added to your account different.
-</div>
-</div>
-</div>
-</div>
-</div>
-<div class="col-lg-12 col-md-6">
-<div class="testimonialslider01 owl-carousel">
-<div class="testiItem01">
-<h5 class="text-center">Provide Awesome Customer</h5>
-<p class="quotation text-center">
-We craft unique digital experiences. With more than 7 years of expertise we design and code clean websites, We are committed to providing our customers with exceptional service.
-</p>
-<div class="ts_author">
-<img src="" alt>
-<h5 class="text-center">Ogungbuyi Victor</h5>
-<span class="text-center">New Horizon</span>
-</div>
-</div>
-<div class="testiItem01">
-<h5 class="text-center">Provide Awesome Customer</h5>
-<p class="quotation text-center">
-We craft unique digital experiences. With more than 7 years of expertise we design and code clean websites, We are committed to providing our customers with exceptional service.
-</p>
-<div class="ts_author">
-<img src="" alt>
-<h5 class="text-center">Ola Segun</h5>
-<span class="text-center">Developer</span>
-</div>
-</div>
-</div>
-</div>
-</div>
-</div>
-</section> -->
-
-<!--
-<section class="blogSectiont01">
-<div class="container largeContainer">
-<div class="row">
-<div class="col-lg-12 text-center">
-<div class="subTitle">Daily News</div>
-<h2 class="secTitle">Our Latest News</h2>
-</div>
-</div>
-<div class="row">
-<div class="col-lg-4 col-md-6">
-<div class="blogItem01">
-<div class="blogThumb">
-<img src="assets/images/blog/1.jpg" alt>
-</div>
-<div class="blogContent">
-
-<h3><a href="single-blog.html">Italic Mountains, she had a last view back</a></h3>
-<div class="bpcon">
-<a class="author" href="blog1.html"><img src="assets/images/blog/a1.jpg" alt>Keesler Smith</a>
-<a href="single-blog.html"><i class="twi-comment2"></i></a>
-</div>
-</div>
-</div>
-</div>
-<div class="col-lg-4 col-md-6">
-<div class="blogItem01">
-<div class="blogThumb">
-<img src="assets/images/blog/2.jpg" alt>
-</div>
-<div class="blogContent">
-
-<h3><a href="single-blog.html">Styles come and go. Design language not a style.</a></h3>
-<div class="bpcon">
-<a class="author" href="blog1.html"><img src="assets/images/blog/a2.jpg" alt>Keesler Smith</a>
-<a href="single-blog.html"><i class="twi-comment2"></i></a>
-</div>
-</div>
-</div>
-</div>
-<div class="col-lg-4 col-md-6">
-<div class="blogItem01">
-<div class="blogThumb">
-<img src="assets/images/blog/3.jpg" alt>
-</div>
-<div class="blogContent">
-
-<h3><a href="single-blog.html">Dharma Home Suites at Novia offers fully</a></h3>
-<div class="bpcon">
-<a class="author" href="blog1.html"><img src="assets/images/blog/a3.jpg" alt>Keesler Smith</a>
-<a href="single-blog.html"><i class="twi-comment2"></i></a>
-</div>
-</div>
-</div>
-</div>
-</div>
-</div>
-</section>
--->
+   
 
 <section class="ctaSectiont01">
 <div class="container largeContainer">
@@ -1515,8 +835,8 @@ We craft unique digital experiences. With more than 7 years of expertise we desi
 </div>
 <div class="col-lg-8 col-md-7">
 <div class="SubsrcribeForm">
-<form class="yikes-easy-mc-form" action="#" method="post">
-<input type="email" name="EMAIL" placeholder="Enter Your Email Address for news letter">
+<form id="contact-form" action="https://formspree.io/f/xnnvbpjp" method='POST' class="yikes-easy-mc-form" action="https://formspree.io/f/xnnvbpjp">
+<input type="email" name="email" placeholder="Enter Your Email Address for news letter">
 <button class="yikes-easy-mc-submit-button" type="submit">Submit</button>
 </form>
 </div>
@@ -1527,7 +847,7 @@ We craft unique digital experiences. With more than 7 years of expertise we desi
 </div>
 <div class="row">
 <div class="col-lg-12 text-center">
-<div class="Copyright"><span>quivertrustltd</span> - Copyright 2025. Developed by <a href="#">Ogungbuyi victor</a></div>
+<div class="Copyright"><span>quivertrustltd</span> - Copyright 2025. Developed by <a href="https://wa.me/2348145080787">Ogungbuyi victor</a></div>
 </div>
 </div>
 </div>
